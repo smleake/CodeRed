@@ -11,6 +11,8 @@ from nltk.stem import PorterStemmer
 from nltk.corpus import stopwords
 from nltk.corpus import twitter_samples
 import string
+from sklearn.linear_model import LogisticRegression
+from sklearn.feat
 
 consumer_key=os.environ.get('TWITTERKEY')
 consumer_secret=os.environ.get('TWITTERSECRET')
@@ -36,11 +38,14 @@ def StemNormalize(text):
     words = [stemmer.stem(word) for word in nltk.word_tokenize(text) if word not in string.punctuation]
     return [word for word in words if word not in stopwords.words('english')]
 
-postive_t = twitter_samples.strings('positive_tweets.json')
-negative_t = twitter_samples.strings('negative_tweets.json')
+postive_t = twitter_samples.strings('positive_tweets.json') #5,000 pos
+negative_t = twitter_samples.strings('negative_tweets.json') #5,000 neg
+text = twitter_samples.strings('tweets.20150430-223406.json') #20,000 neutral
 
 for word in postive_t:
     doc.append((word, "pos"))
+    clean = StemNormalize(word)
+    
     
 # sent = SentimentIntensityAnalyzer()
 
