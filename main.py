@@ -14,17 +14,9 @@ positiveQuery = []
 neutralQuery = []
 cleanPosTokens = []
 cleanNegTokens = []
-queries.append("@ oil field workers that put money over human rights.... i heard mcdonalds is hiring")
-queries.append("This is so surreal. As a guy who spent most of his life in Georgia, I'm seeing a majority of the country rallying around us and the energy and the compassion behind it is undeniable. Change is coming and we got to give it everything we've got.")
 queries.append("My girl will forever fascinate me... utterly beautiful")
-queries.append("Up like Joe Biden")
-queries.append("Just beat a Biden voter to death with a hammer")
 queries.append("music is the answer")
-queries.append("Main hobby.. bitin into pussy like it’s an apple")
-queries.append("Big MILF guy")
-queries.append("I'm so mentally unstable now it's ridiculous, I've never cried so much as I had the last 2 years shits ridiculous")
 queries.append("im top 5 iron 1 valorant players")
-queries.append("have no idea why conservatives are so scared of Biden?? you literally don’t have anything to lose??? unless you’re some insanely rich jeff bezos type mf. I can’t handle these cry baby straight white people who think they’re at risk. HOW YALL THINK MINORITIES FEEL 24/7??!!!")
 
 for word in queries:
     cus_tokens = remove_noise(word_tokenize(word))
